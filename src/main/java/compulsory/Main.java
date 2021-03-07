@@ -20,7 +20,7 @@ public class Main {
         l2.setDist(l5, 10);
         l3.setDist(l4, 20);
         l4.setDist(l5, 30);
-        l5.setDist(l4, 30);
+        l5.setDist(l4, 10);
         l4.setDist(l6, 10);
         l5.setDist(l6, 20);
 
@@ -33,19 +33,14 @@ public class Main {
         locationList.add(l6);
 
 
-        City city = new City("New York", locationList);
-
-        System.out.println("The city and location list are: " + city);
-
-        Collections.sort(locationList);
-        System.out.println("The natural ordering of location list gilen by their names is: \n" + locationList);
+        City city = new City("Chicago", locationList);
 
         System.out.println("The distance map is: ");
         for (Location location : locationList) {
             for (Location name: location.getDist().keySet()){
                 String key = name.getName();
-                String lalue = location.getDist().get(name).toString();
-                System.out.println(location.getName()+ "->" + key + "=" + lalue);
+                String value = location.getDist().get(name).toString();
+                System.out.println(location.getName()+ "->" + key + "=" + value);
             }
         }
 
