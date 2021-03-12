@@ -10,10 +10,19 @@ The City class will contain a List of locations.
 Each location will contain a Map representing the times required to go from this location to others.
 Create all the objects given in the example.
 ```
+OPTIONAL
+```text
+In the City class, create a method to display the locations that are visitable and are not payable, sorted by their opening hour.
+Create default methods in the interface Visitable, with the opening hour 09:30 and the closing hour 20:00.
+Create a static method getVisitingDuration,in the interface Visitable, that returns a Duration object, representing how long a location is opened during a day.
+Create the class TravelPlan. An instance of this class will contain a city and the preferences regarding the visiting order.
+Implement an efficient agorithm to determine the shortest path between two given locations, conforming to the preferences.
+```
 
 ## Solved tasks
 
 As of today (07.03.2021) I have solved all tasks regarding the compulsory task.
+As of 12.03, I have also solved the optional tasks.
 ## Build and run
 
 To compile and run my project I have typed the following commands in the terminal:
@@ -40,4 +49,19 @@ Church B->Church A=10
 Church B->Restaurant=20
 
 
+```
+The output for the optional part is:
+```bash
+The name of the location is: Church A and it opens at 10:12:13
+
+The name of the location is: Church B and it opens at 23:59:59
+
+The name of the location is: Restaurant and it opens at 23:59:59
+
+0:21
+City: Chicago has the following locations: [The Location is called: Church A, The Location is called: Church B, The Location is called: Hotel, The Location is called: Museum A, The Loc
+ation is called: Museum B, The Location is called: Restaurant]
+
+[The Location is called: Church A, The Location is called: Museum B]
+30
 ```
