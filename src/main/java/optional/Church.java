@@ -5,7 +5,6 @@ public class Church extends Location {
     private String name;
 
 
-
     public Church(String name) {
         super(name);
         this.name = name;
@@ -21,8 +20,6 @@ public class Church extends Location {
     public void setName(String name) {
         this.name = name;
     }
-
-
 
 
 }

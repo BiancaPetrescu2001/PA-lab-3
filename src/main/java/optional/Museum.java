@@ -4,13 +4,13 @@ import javafx.util.Pair;
 
 import java.time.LocalTime;
 
-public class Museum extends Location implements  Payable {
+public class Museum extends Location implements Payable {
 
     private String name;
     private double fee;
-    private Pair<LocalTime,LocalTime> visitingHours;
+    private Pair<LocalTime, LocalTime> visitingHours;
 
-    public Museum(String name,  double fee, Pair<LocalTime, LocalTime> visitingHours) {
+    public Museum(String name, double fee, Pair<LocalTime, LocalTime> visitingHours) {
         super(name);
         this.name = name;
         this.fee = fee;
@@ -31,7 +31,6 @@ public class Museum extends Location implements  Payable {
     public double getEntryFee() {
         return fee;
     }
-
 
 
     @Override

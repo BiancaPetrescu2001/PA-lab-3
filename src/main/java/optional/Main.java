@@ -34,10 +34,9 @@ public class Main {
         locationList.add(v5);
         locationList.add(v6);
 
-    //    v1.setVisitingHours(Pair(LocalTime.of(10,12,13), LocalTime.of(10,34,8)));
-        v4.setOpeningHours(LocalTime.of(10,12,13));
-        v4.setClosingHours(LocalTime.of(10,34,8));
-
+        //    v1.setVisitingHours(Pair(LocalTime.of(10,12,13), LocalTime.of(10,34,8)));
+        v4.setOpeningHours(LocalTime.of(10, 12, 13));
+        v4.setClosingHours(LocalTime.of(10, 34, 8));
 
 
         City city = new City("Chicago", locationList);
@@ -49,18 +48,18 @@ public class Main {
 
         System.out.println("The cost map is: ");
         for (Location location : locationList) {
-            for (Location name: location.getDist().keySet()){
+            for (Location name : location.getDist().keySet()) {
                 String key = name.getName();
                 String value = location.getDist().get(name).toString();
-                System.out.println(location.getName()+ "->" + key + "=" + value);
+                System.out.println(location.getName() + "->" + key + "=" + value);
             }
         }
 
         city.visitNotPay();
-        Duration diff=(Visitable.getVisitingDuration(v4.getOpeningHours(), v4.getClosingHours()));
+        Duration diff = (Visitable.getVisitingDuration(v4.getOpeningHours(), v4.getClosingHours()));
         String hms = String.format("%d:%02d",
                 diff.toHours(),
-                diff.toMinutes() );
+                diff.toMinutes());
         System.out.println(hms);
 
 
@@ -68,14 +67,14 @@ public class Main {
         wantedLocations.add(v4);
         wantedLocations.add(v3);
 
-        TravelPlan myTravel=new TravelPlan(city,wantedLocations);
+        TravelPlan myTravel = new TravelPlan(city, wantedLocations);
 
 
         System.out.println(myTravel.getVisitedCity());
         System.out.println(myTravel.getLocations());
 
         city.buildDistanceMatrix();
-        System.out.println(city.getMinimumDistance(0,1));
+        System.out.println(city.getMinimumDistance(0, 1));
 
         System.out.println(city.getLocations().get(0).getDist().get(city.getLocations().get(1)));
 

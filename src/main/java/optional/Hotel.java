@@ -4,11 +4,11 @@ import javafx.util.Pair;
 
 import java.time.LocalTime;
 
-public class Hotel extends Location implements  Classifiable, Payable {
+public class Hotel extends Location implements Classifiable, Payable {
 
     private String name;
     private int rank;
-    private Pair<LocalTime,LocalTime> visitingHours;
+    private Pair<LocalTime, LocalTime> visitingHours;
     private double fee;
 
     public Hotel(String name, int rank, Pair<LocalTime, LocalTime> visitingHours, double fee) {
@@ -25,16 +25,13 @@ public class Hotel extends Location implements  Classifiable, Payable {
     }
 
 
-
     @Override
-    public int getRank()
-    {
+    public int getRank() {
         return rank;
     }
 
     @Override
-    public double getEntryFee()
-    {
+    public double getEntryFee() {
         return fee;
     }
 

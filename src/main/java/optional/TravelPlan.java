@@ -1,4 +1,5 @@
 package optional;
+
 import java.util.List;
 
 public class TravelPlan {

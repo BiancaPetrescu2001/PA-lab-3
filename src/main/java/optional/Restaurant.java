@@ -4,8 +4,8 @@ import javafx.util.Pair;
 
 import java.time.LocalTime;
 
-public class Restaurant extends Location implements  Classifiable {
-    private Pair<LocalTime,LocalTime> visitingHours;
+public class Restaurant extends Location implements Classifiable {
+    private Pair<LocalTime, LocalTime> visitingHours;
     private String name;
     private int rank;
 
